@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+         const leaderboardBody = document.getElementById('leaderboard-body'); 
+         leaderboardBody.addEventListener('click', (event) => { 
+            const clickedRow = event.target.closest('tr'); 
+            if (clickedRow && leaderboardBody.contains(clickedRow)) { 
+                leaderboardBody.insertBefore(clickedRow, leaderboardBody.firstChild); 
+                }
+                 });
+                  });
+</script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
